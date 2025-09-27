@@ -214,7 +214,6 @@ export AUR_PACKAGES="\
 	libretro-prosystem-git \
 	libretro-stella2014-git \
 	libretro-virtualjaguar-git \
-	linux-firmware-valve \
 	kanit-font \
 	nintendo-udev \
 	opengamepadui-bin \
@@ -233,6 +232,7 @@ export AUR_PACKAGES="\
 	wyvern \
 	xpadneo-dkms-git \
 	zenergy-dkms-git \
+	lact-bin \
 "
 
 export SERVICES="\
@@ -252,6 +252,7 @@ export SERVICES="\
 	sshd \
 	systemd-timesyncd \
 	swapfile \
+	lactd \
 "
 
 export USER_SERVICES="\
@@ -310,6 +311,7 @@ postinstallhook() {
 		grep -v org.gnome.Software.desktop |
 		grep -v org.gnome.TextEditor.desktop |
 		grep -v steam.desktop |
+		grep -v lact.desktop |
 		xargs -I {} sh -c "echo NoDisplay=true >> {}"
 
 	# force -steamdeck option in desktop mode to prevent constant steam updates

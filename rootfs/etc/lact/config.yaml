@@ -1,0 +1,7 @@
+# Default LACT configuration shipped by this image
+# Goal: enable auto-apply on boot while keeping stock values until the user changes them.
+# Users can adjust settings in the LACT GUI; with save_on_change enabled, changes persist
+# and with apply_on_boot enabled, lactd reapplies them automatically on future boots.
+
+apply_on_boot: true
+save_on_change: true
